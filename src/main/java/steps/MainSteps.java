@@ -1,6 +1,5 @@
 package steps;
 
-import org.openqa.selenium.WebDriver;
 import pages.MainPage;
 import ru.yandex.qatools.allure.annotations.Step;
 

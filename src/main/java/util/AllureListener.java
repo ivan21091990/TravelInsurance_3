@@ -7,7 +7,7 @@ import steps.BaseSteps;
 public class AllureListener extends AllureRunListener {
 
     @Override
-    public void testFailure(Failure failure){
+    public void testFailure(Failure failure) {
         BaseSteps.takeScreenshot();
         super.testFailure(failure);
     }

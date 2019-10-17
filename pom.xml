@@ -7,12 +7,12 @@
     <groupId>aplana.com</groupId>
     <artifactId>test</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <properties>
         <allure.version>1.5.2</allure.version>
         <aspectj.version>1.8.9</aspectj.version>
         <compiler.version>1.8</compiler.version>
         <selenium.version>3.8.0</selenium.version>
-
     </properties>
 
     <dependencies>
@@ -21,6 +21,7 @@
             <artifactId>allure-junit-adaptor</artifactId>
             <version>${allure.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
@@ -75,12 +76,11 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>8</source>
-                    <target>8</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 
 </project>
