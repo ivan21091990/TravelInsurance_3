@@ -14,7 +14,12 @@ public class SendAppSteps extends BaseSteps {
 
     @Step("проверка заполнения поля {0} значением {1}")
     public void stepCheckFileField(String value, String fieldName){
-        new SendAppPage(driver).checkFillField(value,fieldName);
+        new SendAppPage(driver).checkFillField(fieldName,value);
+    }
+
+    @Step("выбрали пол страхователя - Мужской")
+    public void stepFloorRadBtn(){
+        new SendAppPage(driver).floorRadBtn.click();
     }
 
     @Step("проверка появления сообщения {0}")

@@ -4,7 +4,7 @@ import steps.*;
 
 import java.util.HashMap;
 
-    public class MyTestForAllureReport extends BaseSteps {
+    public class MyAllureReportTest extends BaseSteps {
         MainSteps mainSteps = new MainSteps();
         PolicySelectionSteps policySelectionSteps = new PolicySelectionSteps();
         SendAppSteps sendAppSteps = new SendAppSteps();
@@ -24,13 +24,13 @@ import java.util.HashMap;
         fields.put("Отчество страхователя", "Сергеевич");
         fields.put("Дата рождения страхователя", "01011985");
 
-        values.put("Ivanov",   "Фамилия застрахованного");
-        values.put("Ivan", "Имя застрахованного");
-        values.put("21.09.1990","Дата рождения застрахованного");
-        values.put("Сергеев","Фамилия страхователя");
-        values.put("Сергей","Имя страхователя");
-        values.put("Сергеевич","Отчество страхователя");
-        values.put("01.01.1985","Дата рождения страхователя");
+        values.put("Фамилия застрахованного", "Ivanov");
+        values.put("Имя застрахованного", "Ivan");
+        values.put("Дата рождения застрахованного", "21.09.1990");
+        values.put("Фамилия страхователя", "Сергеев");
+        values.put("Имя страхователя", "Сергей");
+        values.put("Отчество страхователя", "Сергеевич");
+        values.put("Дата рождения страхователя", "01.01.1985");
 
 
         mainSteps.stepSelectMenuItem("Страхование");
@@ -45,6 +45,7 @@ import java.util.HashMap;
 
         sendAppSteps.stepFileFields(fields);
         sendAppSteps.stepCheckFileFields(values);
+        sendAppSteps.stepFloorRadBtn();
         sendAppSteps.stepSendButton();
         sendAppSteps.stepCheckFieldErrorMessage("Заполнены не все обязательные поля");
 
